@@ -1,0 +1,84 @@
+{**
+ * @param string   $basePath web base path
+ * @param array    $flashes  flash messages
+ *}
+<!DOCTYPE html>
+<html>
+<head>
+    {include './components/head.latte'}
+    {block head}{/block}
+</head>
+
+<body class="nittro-transition-auto nittro-transition-bar">
+  <header>
+    <div n:snippet="header" class="nittro-transition-auto">
+      {include './components/navigation.latte'}
+    </div>
+  </header>
+  <main class="clearfix">
+    <div n:snippet="menu" class="nittro-transition-auto">
+      <div class="menu-opener" data-toggle="collapse" data-target="#sub-menu" aria-expanded="false" aria-controls="sub-menu">
+        <label class="ml-auto">
+          Zobrazit nabídku <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </label>
+      </div>
+      <div id="sub-menu" class="menu-wrapper collapse">
+        {ifCurrent Homepage:*}
+          {include './components/researchesSidebar.latte'}
+        {/ifCurrent}
+        {ifCurrent Research:*}
+          {include './components/researchSidebar.latte'}
+        {/ifCurrent}
+      </div>
+    </div>
+    <div n:snippet="content" class="nittro-transition-auto nittro-transition-fade ">
+      <div class="content-container">
+        {include content}
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="page-footer default-primary-color center-on-small-only">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+    <div class="row">
+
+    <!--First column-->
+    <div class="col-md-6">
+      <h5 class="title">Footer Content</h5>
+      <p>Here you can use rows and columns here to organize your footer content.</p>
+    </div>
+    <!--/.First column-->
+
+    <!--Second column-->
+    <div class="col-md-6">
+      <h5 class="title">Links</h5>
+      <ul>
+          <li><a href="#!">Link 1</a></li>
+          <li><a href="#!">Link 2</a></li>
+          <li><a href="#!">Link 3</a></li>
+          <li><a href="#!">Link 4</a></li>
+      </ul>
+    </div>
+    <!--/.Second column-->
+    </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright dark-primary-color">
+      <div class="container-fluid">
+      © 2015 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+
+      </div>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+{block scripts}
+  {include './components/scripts.latte'}
+{/block}
+</body>
+</html>

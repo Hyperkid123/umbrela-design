@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {include '../components/head.latte'} {block head}{/block}
+</head>
+
+<body class="nittro-transition-auto nittro-transition-bar">
+  <header>
+    <div n:snippet="header" class="nittro-transition-auto">
+      <div class="container">
+        <div class="row justify-content-center mt-4">
+          {include '../components/brand.latte'}
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="clearfix">
+    <div n:snippet="menu" class="nittro-transition-auto">
+    </div>
+    <div n:snippet="content" class="nittro-transition-auto nittro-transition-fade ">
+      <div class="landing-container">
+        {include content}
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="page-footer default-primary-color center-on-small-only">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+      <div class="row">
+
+        <!--First column-->
+        <div class="col-md-6">
+          <h5 class="title">Footer Content</h5>
+          <p>Here you can use rows and columns here to organize your footer content.</p>
+        </div>
+        <!--/.First column-->
+
+        <!--Second column-->
+        <div class="col-md-6">
+          <h5 class="title">Links</h5>
+          <ul>
+            <li><a href="#!">Link 1</a></li>
+            <li><a href="#!">Link 2</a></li>
+            <li><a href="#!">Link 3</a></li>
+            <li><a href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <!--/.Second column-->
+      </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright dark-primary-color">
+      <div class="container-fluid">
+        ÚMO PEF MENDELU, 2016 - 2018
+      </div>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+{block scripts} {include '../components/scripts.latte'} {/block}
+</body>
+
+</html>

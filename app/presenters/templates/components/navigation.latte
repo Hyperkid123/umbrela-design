@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark dark-primary-color">
+
+    <!-- Navbar brand -->
+    {include './brand-small.latte'}
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+        <li {ifCurrent Homepage:*} class="nav-item active waves-effect waves-light" {else} class="nav-item waves-effect waves-light" {/ifCurrent}>
+                <a class="nav-link" n:href="Homepage:default">
+                  <i class="material-icons">home</i>
+                  Výzkumy
+                </a>
+            </li>
+            <li class="nav-item waves-effect waves-light">
+                <a class="nav-link" n:href="Homepage:default">
+                  <i class="material-icons">person</i>
+                  Účet
+                </a>
+            </li>
+            <li class="nav-item waves-effect waves-light">
+              <a class="nav-link" n:href="Homepage:transition">
+                <i class="material-icons">help</i>
+                Manuál
+              </a>
+            </li>
+            <li class="nav-item waves-effect waves-light">
+                <a class="nav-link waves-effect waves-light" n:href="Homepage:transition">
+                  <i class="material-icons">exit_to_app</i>
+                  Odhlásit
+                </a>
+            </li>
+        </ul>
+        <!-- Links -->
+    </div>
+    <!-- Collapsible content -->
+
+</nav>

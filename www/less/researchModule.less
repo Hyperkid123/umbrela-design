@@ -1,0 +1,46 @@
+@import 'palette';
+@import 'mixins';
+
+ul.sheet-navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    height: 48px;
+    padding-left: .5em;
+    padding-right: .5em;
+    cursor: pointer;
+    transition: @transition;
+    &:hover {
+      background: @background-color;
+    }
+    .sheet-navigation-item-container{
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        height: 100%;
+        div {
+          display: table-cell;
+          vertical-align: middle;
+        }
+    }
+  }
+}
+
+div.sheet-header {
+  padding-top: 12px;
+  background-color: rgba(0, 0, 0, .03);
+  height: 49px;
+  .md-form {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+input.sheet-header {
+  margin: 0;
+  padding: 0px 20px 12px 20px;
+  width: calc(100% - 40px);
+  color: @primary-text-color !important;
+  height: auto;
+}

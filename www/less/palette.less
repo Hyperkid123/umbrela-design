@@ -1,0 +1,73 @@
+@dark-primary-color: #1976D2;
+@default-primary-color: #2196F3 ;
+@light-primary-color: #BBDEFB;
+@text-primary-color: #FFFFFF;
+@accent-color: #FF5252;
+@primary-text-color: #212121;
+@secondary-text-color: #757575;
+@divider-color: #BDBDBD;
+@background-color: #EEEEEE;
+@form-text-color: #495057;
+
+.dark-primary-color    { background: @dark-primary-color }
+.default-primary-color { background: @default-primary-color }
+.light-primary-color   { background: @light-primary-color }
+.text-primary-color    { color: @text-primary-color }
+.accent-color          { background: @accent-color }
+.primary-text-color    { color: @primary-text-color !important}
+.secondary-text-color  { color: @secondary-text-color }
+.divider-color         { border-color: @divider-color; }
+.accent-text-color     { color: @accent-color; }
+
+/**
+* mdb input colors override
+*/
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=search-md]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+textarea.md-textarea:focus:not([readonly]) {
+  border-color: @default-primary-color !important;
+}
+
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=search-md]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid @default-primary-color !important;
+    box-shadow: 0 1px 0 0 @default-primary-color !important;
+}
+
+input[type=date]:focus:not([readonly])+label,
+input[type=datetime-local]:focus:not([readonly])+label,
+input[type=email]:focus:not([readonly])+label,
+input[type=number]:focus:not([readonly])+label,
+input[type=password]:focus:not([readonly])+label,
+input[type=search-md]:focus:not([readonly])+label,
+input[type=search]:focus:not([readonly])+label,
+input[type=tel]:focus:not([readonly])+label,
+input[type=text]:focus:not([readonly])+label,
+input[type=time]:focus:not([readonly])+label,
+input[type=url]:focus:not([readonly])+label,
+textarea.md-textarea:focus:not([readonly])+label {
+  color: @default-primary-color;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: @default-primary-color;
+}

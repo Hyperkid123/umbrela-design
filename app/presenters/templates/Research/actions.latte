@@ -1,0 +1,50 @@
+{block content}
+<div class="container-fluid">
+  <div class="row mt-3 justify-content-center">
+    <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6">
+      <div class="card research-card">
+        <div class="card-header divider-color lighten-1 primary-text-color ellipsis card-header-title-text">
+          Nastavení výzkumu
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Zveřejnit výzkum</h4>
+          <p class="card-text">
+            Zde můžete aktivovat svůj výzkum a začít získávat odpovědi. Jakmile
+            je aktivovaný a má odpovědi, nelze jej nijak změnit. V případě změny
+            je nutné jej pozastavit, exportovat výsledky a smazat odpovědi.
+            Až poté je možné výzkum změnit.
+          </p>
+          <form>
+            <div class="md-form">
+              <input type="text" id="date-till" class="form-control datepicker">
+              <label for="date-till">Vyberte datum</label>
+            </div>
+            <div class="text-center">
+              <input type='submit' class="btn default-primary-color" value="Zveřejnit do data"/>
+            </div>
+            <div class="text-center">
+              <input type='submit' class="btn default-primary-color" value="Zveřejnit na 30 dní"/>
+            </div>
+          </form>
+          <hr class="divider-color"/>
+          <h4 class="card-title">Smazat odpovědi</h4>
+          <p class="card-text">
+            Touto akcí se smažou veškeré odpovědi na výzkum a nebude možné k
+            nim nijak přistoupit. Před provedením této akce si prosím vaše
+            výsledky exportujte. Smazání odpovědí musíte nejdříve potvrdit
+            zaškrtnutím políčka smazat.
+          </p>
+          <div class="flex-row d-flex justify-content-between flex-wrap">
+              <div class="md-checkbox">
+                <input id="r-active-1" type="checkbox">
+                <label for="r-active-1">Opravdu smazat?</label>
+              </div>
+              <button type="button" class="btn accent-color" disabled>Smazat</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/block}

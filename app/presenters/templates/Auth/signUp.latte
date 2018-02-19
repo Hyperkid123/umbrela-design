@@ -1,0 +1,53 @@
+{block content}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="text-center">Resitrace</hr>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="md-form">
+                   <input type="text" id="first-name" class="form-control">
+                   <label for="first-name">Jméno</label>
+                 </div>
+                 <div class="md-form">
+                    <input type="text" id="last-name" class="form-control">
+                    <label for="last-name">Příjmení</label>
+                  </div>
+                  <div class="md-form">
+                     <input type="email" id="email" class="form-control">
+                     <label for="email">Email</label>
+                 </div>
+
+                 <div class="md-form">
+                    <input type="text" id="login" class="form-control">
+                    <label for="login">Uživatelské jméno</label>
+                </div>
+                <div class="md-form">
+                   <input type="password" id="password" class="form-control">
+                   <label for="password">Heslo</label>
+               </div>
+               <div class="md-form">
+                  <input type="password" id="password-aggain" class="form-control">
+                  <label for="password-aggain">Heslo znovu</label>
+              </div>
+              <div class="text-center">
+                <a n:href="Auth:registrationComplete" class="btn default-primary-color" value="Odeslat">Odeslat</a>
+                <!--<input type='submit' class="btn default-primary-color" value="Odeslat"/>-->
+              </div>
+              </form>
+            </div>
+            <div class="card-footer">
+              <div class="row justify-content-end">
+                <div class="col text-end">
+                  <a class="secondary-text-color" n:href="Auth:default">Přihlásit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+{/block}

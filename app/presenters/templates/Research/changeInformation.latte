@@ -1,0 +1,95 @@
+{block content}
+<div class="container-fluid">
+  <div class="row mt-3 justify-content-center">
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-7">
+      <div class="card research-card">
+        <div class="card-header divider-color lighten-1 primary-text-color ellipsis card-header-title-text">
+          Změna informací
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <h4 class="card-title mb-3">Povinné informace</h4>
+                <div class="md-form">
+                  <input type="text" id="first-name" class="form-control">
+                  <label for="first-name">Název výzkumu</label>
+                </div>
+                <div class="md-form">
+                  <textarea
+                    placeholder="Vyplňte prosím popis vašeho výzkumu"
+                    type="text"
+                    id="research-description"
+                    class="md-textarea margin-fix-7"
+                    onkeyup="init('research-description')"
+                    data-resizable="true">
+                  </textarea>
+                  <label class="label-position-fix-8" for="research-description">Popis výzkumu</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <h4 class="card-title mb-3">Volitelné informace</h4>
+                <div class="md-form">
+                  <textarea
+                    placeholder="Vyplňte prosím popis vašeho výzkumu"
+                    type="text"
+                    id="research-goal"
+                    class="md-textarea margin-fix-11"
+                    onkeyup="init('research-goal')"
+                    data-resizable="true">
+                  </textarea>
+                  <label for="research-description">Cíl výzkumu</label>
+                </div>
+                <div class="md-form">
+                  <textarea
+                    placeholder="Vyplňte prosím popis vašeho výzkumu"
+                    type="text"
+                    id="begin-text"
+                    class="md-textarea"
+                    onkeyup="init('begin-text')"
+                    data-resizable="true">
+                  </textarea>
+                  <label for="research-description">Úvodní text</label>
+                </div>
+                <div class="md-form">
+                  <textarea
+                    placeholder="Vyplňte prosím popis vašeho výzkumu"
+                    type="text"
+                    id="end-text"
+                    class="md-textarea"
+                    onkeyup="init('end-text')"
+                    data-resizable="true">
+                  </textarea>
+                  <label for="research-description">Zakončující text</label>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <input type='submit' class="btn default-primary-color" value="Uložit"/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/block}
+
+{block scripts}
+  {include parent}
+  <script type="text/javascript">
+      function resizeTextArea(id) {
+          var a = document.getElementById(id);
+          a.style.height = 'auto';
+          a.style.height = a.scrollHeight + 'px';
+      }
+
+      function init() {
+          var a = document.getElementsByTagName('textarea');
+          for (var i = 0, inb = a.length; i < inb; i++) {
+              if (a[i].getAttribute('data-resizable') == 'true')
+                  resizeTextArea(a[i].id);
+          }
+      }
+  </script>
+{/block}
